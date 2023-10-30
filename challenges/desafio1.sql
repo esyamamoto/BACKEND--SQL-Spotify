@@ -7,8 +7,8 @@ USE SpotifyClone;
 CREATE TABLE
     plans_signature (
         id_plans INT auto_increment not null,
-        plans VARCHAR(255) not null,
-        value VARCHAR(255) not null,
+        name_plans VARCHAR(255) not null,
+        value_plan VARCHAR(255) not null,
         CONSTRAINT PRIMARY KEY(id_plans)
     );
 
@@ -74,8 +74,12 @@ insert into
 values ('1', 'Beyoncé'), ('2', 'Queen'), ('3', 'Elis Regina'), ('4', 'Baco Exu do Blues'), ('5', 'Blind Guardian'), ('6', 'Nina Simone');
 
 insert into
-    plans_signature (id_plans, plans, value)
-values ('1', 'gratuito', '0,00'), ('2', 'familiar', '7,99'), ('3', 'universitario', '5,99'), ('4', 'pessoal', '6,99');
+    plans_signature (
+        id_plans,
+        name_plans,
+        value_plan
+    )
+values ('1', 'gratuito', '0.00'), ('2', 'familiar', '7.99'), ('3', 'universitario', '5.99'), ('4', 'pessoal', '6.99');
 
 insert into
     users (
