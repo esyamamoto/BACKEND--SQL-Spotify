@@ -31,7 +31,7 @@ CREATE TABLE
     );
 
 CREATE TABLE
-    album (
+    albuns (
         id_album INT auto_increment not null,
         name_album VARCHAR(255) not null,
         year_album year not null,
@@ -47,7 +47,7 @@ CREATE TABLE
         duration_music int not null,
         id_album int not null,
         CONSTRAINT PRIMARY KEY(id_music),
-        foreign key (id_album) references album (id_album)
+        foreign key (id_album) references albuns (id_album)
     );
 
 CREATE TABLE
@@ -152,7 +152,7 @@ insert into
 values ('1', '1'), ('1', '2'), ('1', '3'), ('2', '1'), ('2', '3'), ('3', '2'), ('4', '4'), ('5', '5'), ('5', '6'), ('6', '6'), ('6', '1'), ('7', '6'), ('9', '3'), ('10', '2');
 
 insert into
-    album (
+    albuns (
         id_album,
         name_album,
         year_album,
